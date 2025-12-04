@@ -29,10 +29,12 @@ jobs:
         run: |
           echo "Event name ${{ github.event_name }}"
           echo "Branch ${{ github.ref_name }}"
+
+      - uses: actions/checkout@v4
       
       - name: List all files
         run: |
-          ls -la
+          tree
 
           
       
