@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - main
-    paths-ignore: [.github/*]
+    paths-ignore: ['.github/**']
 
   # On every pull request to the main barcnh
   pull_request:
