@@ -1,0 +1,42 @@
+name: Github Actions Demo
+
+on:
+  # Manually
+  workflow_dispatch:
+  
+  # On every push to main branch, exclude .github/ folder
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/*'
+
+  # On every pull request to the main barcnh
+  pull_request:
+    branches:
+      - main
+
+  # Every sunday at 6:15 UTC
+  schedule:
+    - cron: 15 6 * * 0
+
+jobs:
+  Build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print info
+        run: |
+          echo "Event name ${{ github.event_name }}"
+          echo "Branch ${{ github.ref_name }}"
+      
+      - name: List all files
+        run: |
+          ls -la
+
+          
+      
+
+
+    
+    
