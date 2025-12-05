@@ -3,6 +3,11 @@ name: Github Actions Demo
 on:
   # Manually
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Production env'
+        type: environment
+        required: true
   
   # On every push to main branch, exclude .github/ folder
   push:
