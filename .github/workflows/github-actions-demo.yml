@@ -39,7 +39,12 @@ jobs:
       - name: List all files
         run: |
           tree
-
+  
+  Test:
+    name: Test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+  
           
       
 
